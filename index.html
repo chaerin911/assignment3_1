@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3주차 과제</title>
+	
+	<style>
+
+		@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+		.notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
+
+		@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@600&display=swap');
+
+		body{margin: 0;}
+		section{background: white; color: white; margin: auto; position: relative; display: flex; justify-content: center; align: center;}
+
+
+		html{font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; scroll-behavior: smooth; letter-spacing: -1px;}
+		div{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; line-height: 1.6; letter-spacing: -1px; width: 1000px; justify-content: center; align: center; padding: 5%;}
+
+		.world {background-image: url('back.png');background-attachment: scroll; background-repeat: no-repeat;}
+	</style>
+
+</head>
+
+
+<body>
+	
+	<section class="world" id="date" style="height: 1080px;">
+		<div>
+
+		아 뭘 잘못했는지 도저히 모르겠네요
+		<br>
+		제 자바 스크립트는 어디로 간 걸까요
+
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		myelement.id = date;
+
+		makeDate();
+
+		function makeDate(){
+			var d = new Date();
+			var month = d.getMonth();
+			var yoil = d.getDay();
+			var day = d.getDate();
+
+			var output = "오늘은 " + month + "월 " + day + "일 " + yoiltrans(yoil) + "입니다.";
+			document.body.innerHTML = output;
+		}
+
+		function yoiltrans(num){
+			var num2;
+			if(num == "1"){ num2 = "월"}
+			else if(num == "2"){ num2 = "화"}
+			else if(num == "3"){ num2 = "수"}
+			else if(num == "4"){ num2 = "목"}
+			else if(num == "5"){ num2 = "금"}
+			else if(num == "6"){ num2 = "토"}
+			else if(num == "7"){ num2 = "일"}
+			return num2 + "요일 " ;
+
+		}
+
+		</script>
+
+
+</body>
+</html>
